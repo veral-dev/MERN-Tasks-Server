@@ -11,8 +11,10 @@ const ProjectSchema = mongoose.Schema({
     register: {
         type: Date,
         default: Date.now()
-    }
+    },
 
+},{
+    timestamps: true
 })
 
 module.exports = mongoose.model('Project', ProjectSchema)

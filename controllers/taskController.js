@@ -55,7 +55,7 @@ exports.getTasks = async (req, res) => {
         }
 
         //Obtener la tarea
-        const tasks = await Task.find({ project }).sort({ register: -1 })
+        const tasks = await Task.find({ project }).sort({ createdAt: -1 })
         res.json({ tasks })
 
     } catch (error) {

@@ -30,7 +30,7 @@ exports.projectCreate = async (req, res) => {
 
 exports.getProjects = async (req, res) => {
     try {
-        const projects = await Project.find({ author: req.user.id }).sort({ register: -1 })
+        const projects = await Project.find({ author: req.user.id }).sort({ createdAt: -1 })
         res.json({ projects })
     } catch (error) {
         console.log(error)
